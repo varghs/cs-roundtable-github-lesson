@@ -27,7 +27,7 @@ def main_user():
     print(words)
 
 def main_testing():
-    f = open("name.txt")
+    f = open("test.txt")
     data = ' '.join(f.read().splitlines())
     words = [i.lower() for i in pigLatin(data).split()]
     alphabeticalSort(words)
