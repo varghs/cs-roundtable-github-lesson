@@ -22,7 +22,7 @@ def alphabeticalSort(words):
 
 def main():
     print("Enter some words.")
-    words = pigLatin(input()).split()
+    words = [i.lower() for i in pigLatin(input()).split()]
     alphabeticalSort(words)
     print("Sorted words.")
     print(words)
