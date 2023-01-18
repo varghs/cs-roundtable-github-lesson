@@ -18,14 +18,19 @@ def alphabeticalSort(words):
         tmp = words[i]
         words[i] = words[minWordIndex]
         words[minWordIndex] = tmp
-        
 
-def main():
+def main_user():
     print("Enter some words.")
     words = [i.lower() for i in pigLatin(input()).split()]
     alphabeticalSort(words)
     print("Sorted words.")
     print(words)
 
+def main_testing():
+    f = open("test.txt")
+    data = ' '.join(f.read().splitlines())
+    words = [i.lower() for i in pigLatin(data).split()]
+    alphabeticalSort(words)
+
 if __name__ == "__main__":
-    main()
+    main_testing()
